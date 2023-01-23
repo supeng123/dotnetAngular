@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "AQralFXFpLKtH7+ohXveRJjRSSt3u3S8sBpd6reRlkAXXnWRElrBDqhbh/z7+wu3l6kJdLs6qSSs7gzCBoRzqg==",
+  "dgSpecHash": "t14uwgPUY9j0/XUOcZm0n8GxY8ctXDw2G2hr1pOfVGcn4nQbIylaAivCH97Q9kBmppPBWQQ46+8w3hUGSPpPpQ==",
   "success": true,
   "projectFilePath": "/Users/supeng/project/skinet/API/API.csproj",
   "expectedPackageFiles": [
+    "/Users/supeng/.nuget/packages/automapper/11.0.0/automapper.11.0.0.nupkg.sha512",
+    "/Users/supeng/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/11.0.0/automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "/Users/supeng/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/supeng/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/supeng/.nuget/packages/microsoft.data.sqlite.core/7.0.0/microsoft.data.sqlite.core.7.0.0.nupkg.sha512",
     "/Users/supeng/.nuget/packages/microsoft.entityframeworkcore/7.0.0/microsoft.entityframeworkcore.7.0.0.nupkg.sha512",
     "/Users/supeng/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.0/microsoft.entityframeworkcore.abstractions.7.0.0.nupkg.sha512",

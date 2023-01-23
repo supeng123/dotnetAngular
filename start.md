@@ -22,6 +22,7 @@ dotnet tool list -g
 
 dotnet ef -h
 dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.0.8
+dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection --version 11.0.0
 dotnet ef migrations add InitialCreate -o Data/Migrations
 dotnet ef database update
 ~~~
