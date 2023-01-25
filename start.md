@@ -44,6 +44,8 @@ dotnet add reference ../Core
 
 cd..
 dotnet restore
+lsof -i :8080
+kill -9 <PID>
 ~~~
 ### migration DB
 ~~~
