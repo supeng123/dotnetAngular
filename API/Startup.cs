@@ -18,6 +18,7 @@ using API.Helpers;
 using API.Middleware;
 using API.Errors;
 using API.Extensions;
+using StackExchange.Redis;
 
 namespace API
 {
@@ -37,6 +38,11 @@ namespace API
             services.AddControllers();
             //*** 1.20
             services.AddDbContext<StoreContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddSingleton<IConnectionMultiplexer>(c => {
+                var configuration = ConfigurationOptions.Parse(Configuration.GetConnectionString("Redis"), true);
+                return ConnectionMultiplexer.Connect(configuration);
+            });
     
             services.AddAutoMapper(typeof(MappingProfiles));
 

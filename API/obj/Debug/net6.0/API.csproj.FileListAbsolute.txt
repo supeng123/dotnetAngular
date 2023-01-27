@@ -79,3 +79,5 @@
 /Users/supeng/project/skinet/API/bin/Debug/net6.0/API.staticwebassets.runtime.json
 /Users/supeng/project/skinet/API/bin/Debug/net6.0/AutoMapper.dll
 /Users/supeng/project/skinet/API/bin/Debug/net6.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/supeng/project/skinet/API/bin/Debug/net6.0/Pipelines.Sockets.Unofficial.dll
+/Users/supeng/project/skinet/API/bin/Debug/net6.0/StackExchange.Redis.dll

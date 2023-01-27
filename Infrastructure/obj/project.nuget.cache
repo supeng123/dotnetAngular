@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4Z6EbmfvzsCcpUFOEJ81HvMj5jPF+po8PlOb4lWq3BiUvbj3mNV8rQERHmpzxYdmVcV6/CL5jGXoekBXsvZ/7A==",
+  "dgSpecHash": "17a6VRW+HaT5gd+Xbq6W4/n4icO0NRKfntkJCnUrn0AFmjjUAB19oYF0joHbdpiZfMe/0hXcqZhvK9L5lxELjw==",
   "success": true,
   "projectFilePath": "/Users/supeng/project/skinet/Infrastructure/Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -21,10 +21,13 @@
     "/Users/supeng/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0/microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "/Users/supeng/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
     "/Users/supeng/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "/Users/supeng/.nuget/packages/pipelines.sockets.unofficial/2.2.2/pipelines.sockets.unofficial.2.2.2.nupkg.sha512",
     "/Users/supeng/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.2/sqlitepclraw.bundle_e_sqlite3.2.1.2.nupkg.sha512",
     "/Users/supeng/.nuget/packages/sqlitepclraw.core/2.1.2/sqlitepclraw.core.2.1.2.nupkg.sha512",
     "/Users/supeng/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.2/sqlitepclraw.lib.e_sqlite3.2.1.2.nupkg.sha512",
     "/Users/supeng/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.2/sqlitepclraw.provider.e_sqlite3.2.1.2.nupkg.sha512",
+    "/Users/supeng/.nuget/packages/stackexchange.redis/2.6.90/stackexchange.redis.2.6.90.nupkg.sha512",
+    "/Users/supeng/.nuget/packages/system.io.pipelines/5.0.1/system.io.pipelines.5.0.1.nupkg.sha512",
     "/Users/supeng/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
     "/Users/supeng/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "/Users/supeng/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
