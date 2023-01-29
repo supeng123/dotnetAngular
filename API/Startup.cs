@@ -19,6 +19,7 @@ using API.Middleware;
 using API.Errors;
 using API.Extensions;
 using StackExchange.Redis;
+using Infrastructure.Identity;
 
 namespace API
 {
@@ -38,6 +39,10 @@ namespace API
             services.AddControllers();
             //*** 1.20
             services.AddDbContext<StoreContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<AppIdentityDbContext>(z => 
+            {
+                z.UseSqlite(Configuration.GetConnectionString("IdentityConnection"));
+            });
 
             services.AddSingleton<IConnectionMultiplexer>(c => {
                 var configuration = ConfigurationOptions.Parse(Configuration.GetConnectionString("Redis"), true);
@@ -46,11 +51,33 @@ namespace API
     
             services.AddAutoMapper(typeof(MappingProfiles));
 
-            services.AdApplicationServices();
+            services.AddApplicationServices();
+    
+
+            services.AddIdentityServices(Configuration);
          
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPIv5", Version = "v1" });
+
+                //2022-1-29 config swaggger http header
+                var securitySchema = new OpenApiSecurityScheme
+                {
+                    Description = "JWT Auth Bearer Scheme",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "bearer",
+                    Reference = new OpenApiReference
+                    {
+                        Type = ReferenceType.SecurityScheme,
+                        Id = "Bearer"
+                    }
+                };
+
+                c.AddSecurityDefinition("Bearer", securitySchema);
+                var securityRequirement = new OpenApiSecurityRequirement{{securitySchema, new[]{"Bearer"}}};
+                c.AddSecurityRequirement(securityRequirement);
             });
 
             services.AddCors(opt => {
@@ -80,6 +107,8 @@ namespace API
             app.UseStaticFiles();
 
             app.UseCors("CorsPolicy");
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
