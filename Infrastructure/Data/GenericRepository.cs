@@ -43,9 +43,26 @@ namespace Infrastructure.Data
             return await ApplySpecification(spec).ToListAsync();
         }
 
+        void IGenericRepository<T>.Add(T entity)
+        {
+            _context.Set<T>().Add(entity);
+        }
+
         private IQueryable<T> ApplySpecification(ISpecification<T> spec)
         {
             return SpecificationEvaluator<T>.GetQuery(_context.Set<T>().AsQueryable(), spec);
+        }
+
+        void IGenericRepository<T>.Delete(T entity)
+        {
+            _context.Set<T>().Remove(entity);
+        }
+
+        void IGenericRepository<T>.Update(T entity)
+        {
+            _context.Set<T>().Attach(entity);
+            _context.Entry(entity).State = EntityState.Modified;
+
         }
     }
 }

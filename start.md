@@ -56,4 +56,16 @@ dotnet ef migrations add InitialCreate -p Infrastructure -s API -o Data/Migratio
 
 
 dotnet ef migrations add IdentityInitial -p Infrastructure -s API -c AppIdentityDbContext -o Identity/Migrations
+
+dotnet ef database drop -p Infrastructure -s API -c StoreContext
+~~~
+### steps to create new feature(order)
+~~~
+1.define the entities in Core
+2.configure entities in Infrastructure to declare the corelation between properties---> OrderConfiguration.cs, 
+3.configure (StoreContext)to set up the tables and using (StoreContextSeed) to inject initial data
+4.create migration ---> dotnet ef migrations add OrderEntityAdded -p Infrastructure -s API -c StoreContext
+5.create service interface(IorderService) in Core and implement its interface in Infrustructure, then register it in ApplicationServicesExtension.cs
+6.create controller (orderSerive), prepare dto and set the mapping relation in MappingProfiles
+7.create transaction by using Unitwork and register it in ApplicationServicesExtension.cs
 ~~~
